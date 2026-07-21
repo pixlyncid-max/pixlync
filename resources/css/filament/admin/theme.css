@@ -1,0 +1,530 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+/* =====================================================
+   PIXLYNC ADMIN — NEO-BRUTALISM THEME
+   ===================================================== */
+
+/* ── Color Tokens ── */
+:root {
+    --neo-black:   #2E483F; /* Main page Primary */
+    --neo-white:   #FFFFFF;
+    --neo-yellow:  #1AC64F; /* Main page Secondary/Accent */
+    --neo-cream:   #FCFAED; /* Main page Background */
+    --neo-border:  #2E483F;
+    --neo-shadow:  4px 4px 0px #2E483F;
+    --neo-shadow-lg: 6px 6px 0px #2E483F;
+    --neo-radius:  0px;
+    --font-display: 'Space Grotesk', 'Syne', sans-serif;
+    --font-body:    'DM Sans', 'Inter', sans-serif;
+}
+
+/* ── Base Body ── */
+body,
+.fi-body {
+    background-color: var(--neo-cream) !important;
+    font-family: var(--font-body) !important;
+    color: var(--neo-black) !important;
+}
+
+/* ── Sidebar ── */
+.fi-sidebar {
+    background-color: var(--neo-black) !important;
+    border-right: 4px solid var(--neo-black) !important;
+    box-shadow: 4px 0 0 0 var(--neo-black) !important;
+}
+
+.fi-sidebar-header {
+    background-color: var(--neo-yellow) !important;
+    border-bottom: 4px solid var(--neo-black) !important;
+    padding: 1.25rem 1.5rem !important;
+}
+
+.fi-sidebar-header * {
+    color: var(--neo-black) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 800 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+}
+
+/* Sidebar nav groups */
+.fi-sidebar-group-label {
+    color: var(--neo-yellow) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 800 !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    padding-left: 1rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+/* Sidebar nav items */
+.fi-sidebar-item-btn {
+    border-radius: var(--neo-radius) !important;
+    margin: 1px 4px !important;
+    transition: all 0.1s ease !important;
+}
+
+.fi-sidebar-item-label,
+.fi-sidebar-item-icon,
+.fi-sidebar-item-btn,
+.fi-sidebar-item-btn * {
+    color: var(--neo-cream) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 600 !important;
+}
+
+.fi-sidebar-item-btn:hover {
+    background-color: var(--neo-yellow) !important;
+    border: 1px solid var(--neo-black) !important;
+    box-shadow: 2px 2px 0 var(--neo-black) !important;
+    transform: translate(-1px, -1px) !important;
+}
+
+.fi-sidebar-item-btn:hover .fi-sidebar-item-label,
+.fi-sidebar-item-btn:hover .fi-sidebar-item-icon,
+.fi-sidebar-item-btn:hover * {
+    color: var(--neo-black) !important;
+}
+
+li.fi-sidebar-item.fi-active > .fi-sidebar-item-btn {
+    background-color: var(--neo-yellow) !important;
+    border: 2px solid var(--neo-black) !important;
+    box-shadow: 2px 2px 0 var(--neo-black) !important;
+}
+
+li.fi-sidebar-item.fi-active > .fi-sidebar-item-btn .fi-sidebar-item-label,
+li.fi-sidebar-item.fi-active > .fi-sidebar-item-btn .fi-sidebar-item-icon,
+li.fi-sidebar-item.fi-active > .fi-sidebar-item-btn * {
+    color: var(--neo-white) !important;
+    font-weight: 800 !important;
+}
+
+/* ── Topbar / Header ── */
+.fi-topbar,
+.fi-simple-header {
+    background-color: var(--neo-cream) !important;
+    border-bottom: 4px solid var(--neo-black) !important;
+    box-shadow: 0 4px 0 0 var(--neo-black) !important;
+}
+
+.fi-topbar-breadcrumbs a,
+.fi-topbar-breadcrumbs span {
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+    color: var(--neo-black) !important;
+    text-transform: uppercase !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* ── Page Title ── */
+.fi-header-heading,
+.fi-simple-header-heading {
+    font-family: var(--font-display) !important;
+    font-weight: 800 !important;
+    font-size: 1.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: -0.02em !important;
+    color: var(--neo-black) !important;
+}
+
+/* ── Cards / Panels / Sections ── */
+.fi-section,
+.fi-card,
+.fi-wi-stats-overview-stat,
+.fi-wi-account-widget,
+.fi-wi-filament-info-widget {
+    background-color: var(--neo-white) !important;
+    border: 3px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    box-shadow: var(--neo-shadow) !important;
+}
+
+.fi-section-header {
+    border-bottom: 3px solid var(--neo-black) !important;
+    background-color: var(--neo-yellow) !important;
+    padding: 0.75rem 1.25rem !important;
+}
+
+.fi-section-header-heading {
+    font-family: var(--font-display) !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em !important;
+    font-size: 0.9rem !important;
+    color: var(--neo-black) !important;
+}
+
+.fi-section-content {
+    background-color: var(--neo-white) !important;
+}
+
+/* ── Form Inputs ── */
+.fi-input,
+.fi-fo-field-wrp input,
+.fi-fo-field-wrp select,
+.fi-fo-field-wrp textarea,
+.fi-fo-rich-editor,
+[data-fi-input] {
+    border: 3px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    background-color: var(--neo-white) !important;
+    box-shadow: 2px 2px 0 var(--neo-black) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 500 !important;
+    color: var(--neo-black) !important;
+    transition: all 0.1s ease !important;
+}
+
+.fi-input:focus,
+.fi-fo-field-wrp input:focus,
+.fi-fo-field-wrp textarea:focus {
+    outline: none !important;
+    box-shadow: 4px 4px 0 var(--neo-black) !important;
+    transform: translate(-1px, -1px) !important;
+    border-color: var(--neo-black) !important;
+}
+
+.fi-fo-field-wrp-label,
+.fi-fo-field-wrp > label,
+.fi-label {
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: var(--neo-black) !important;
+}
+
+/* Select/Dropdown */
+.fi-select-input,
+.fi-fo-select {
+    border: 3px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    background-color: var(--neo-white) !important;
+    box-shadow: 2px 2px 0 var(--neo-black) !important;
+}
+
+/* Toggle Switch */
+.fi-toggle {
+    --toggle-bg-checked: var(--neo-black) !important;
+    --toggle-border-checked: var(--neo-black) !important;
+}
+
+/* ── Buttons ── */
+.fi-btn {
+    border-radius: var(--neo-radius) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 800 !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    transition: all 0.1s ease !important;
+    border: 3px solid var(--neo-black) !important;
+}
+
+.fi-btn-color-primary,
+.fi-btn[data-color="primary"] {
+    background-color: var(--neo-yellow) !important;
+    color: var(--neo-black) !important;
+    box-shadow: var(--neo-shadow) !important;
+}
+
+.fi-btn-color-primary:hover,
+.fi-btn[data-color="primary"]:hover {
+    transform: translate(-2px, -2px) !important;
+    box-shadow: var(--neo-shadow-lg) !important;
+}
+
+.fi-btn-color-primary:active,
+.fi-btn[data-color="primary"]:active {
+    transform: translate(2px, 2px) !important;
+    box-shadow: none !important;
+}
+
+.fi-btn-color-danger,
+.fi-btn[data-color="danger"] {
+    background-color: #ff4d4d !important;
+    color: var(--neo-white) !important;
+    box-shadow: var(--neo-shadow) !important;
+}
+
+.fi-btn-color-gray,
+.fi-btn[data-color="gray"] {
+    background-color: var(--neo-white) !important;
+    color: var(--neo-black) !important;
+    box-shadow: var(--neo-shadow) !important;
+}
+
+.fi-btn:hover {
+    transform: translate(-2px, -2px) !important;
+    box-shadow: var(--neo-shadow-lg) !important;
+}
+
+.fi-btn:active {
+    transform: translate(2px, 2px) !important;
+    box-shadow: none !important;
+}
+
+/* ── Table ── */
+.fi-ta-table,
+.fi-ta-ctn {
+    border: 3px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    overflow: hidden !important;
+    box-shadow: var(--neo-shadow) !important;
+}
+
+.fi-ta-header-cell,
+th[class*="fi-ta"] {
+    background-color: var(--neo-black) !important;
+    color: var(--neo-yellow) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 800 !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    border-bottom: 3px solid var(--neo-black) !important;
+    padding: 0.85rem 1rem !important;
+}
+
+.fi-ta-row,
+tr[class*="fi-ta"] {
+    border-bottom: 2px solid var(--neo-black) !important;
+    background-color: var(--neo-white) !important;
+    transition: background-color 0.1s ease !important;
+}
+
+.fi-ta-row:hover,
+tr[class*="fi-ta"]:hover {
+    background-color: var(--neo-cream) !important;
+}
+
+.fi-ta-row:nth-child(even) {
+    background-color: #faf9ee !important;
+}
+
+.fi-ta-cell,
+td[class*="fi-ta"] {
+    font-family: var(--font-body) !important;
+    font-weight: 500 !important;
+    color: var(--neo-black) !important;
+    border-right: 1px solid rgba(26, 26, 26, 0.15) !important;
+    padding: 0.75rem 1rem !important;
+}
+
+/* ── Badges ── */
+.fi-badge {
+    border-radius: var(--neo-radius) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 800 !important;
+    font-size: 0.6rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    border: 2px solid var(--neo-black) !important;
+    box-shadow: 1px 1px 0 var(--neo-black) !important;
+    padding: 2px 8px !important;
+}
+
+/* ── Search / Filter Bar ── */
+.fi-ta-filters,
+.fi-ta-search-field input {
+    border: 3px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    background-color: var(--neo-white) !important;
+    box-shadow: 2px 2px 0 var(--neo-black) !important;
+}
+
+/* ── Pagination ── */
+.fi-pagination-item a,
+.fi-pagination-item button {
+    border: 2px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+    color: var(--neo-black) !important;
+    background-color: var(--neo-white) !important;
+    box-shadow: 2px 2px 0 var(--neo-black) !important;
+    transition: all 0.1s ease !important;
+}
+
+.fi-pagination-item a:hover,
+.fi-pagination-item button:hover {
+    background-color: var(--neo-yellow) !important;
+    transform: translate(-1px, -1px) !important;
+    box-shadow: 3px 3px 0 var(--neo-black) !important;
+}
+
+.fi-pagination-item--active a,
+.fi-pagination-item--active button {
+    background-color: var(--neo-black) !important;
+    color: var(--neo-yellow) !important;
+}
+
+/* ── Dashboard Widgets ── */
+.fi-wi-stats-overview {
+    gap: 1.25rem !important;
+}
+
+.fi-wi-stats-overview-stat {
+    background-color: var(--neo-white) !important;
+    border: 3px solid var(--neo-black) !important;
+    box-shadow: var(--neo-shadow) !important;
+    border-radius: var(--neo-radius) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.fi-wi-stats-overview-stat::before {
+    content: '' !important;
+    display: block !important;
+    height: 6px !important;
+    background-color: var(--neo-yellow) !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* ── Notifications ── */
+.fi-no-notification {
+    border: 3px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    background-color: var(--neo-white) !important;
+    box-shadow: var(--neo-shadow) !important;
+    font-family: var(--font-body) !important;
+}
+
+/* ── Modals / Dialogs ── */
+.fi-modal-window,
+.fi-dialog-window {
+    border: 4px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    box-shadow: var(--neo-shadow-lg) !important;
+    background-color: var(--neo-white) !important;
+}
+
+.fi-modal-header,
+.fi-dialog-header {
+    background-color: var(--neo-yellow) !important;
+    border-bottom: 3px solid var(--neo-black) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 800 !important;
+}
+
+/* ── Login Page ── */
+.fi-simple-layout,
+.fi-simple-main {
+    background-color: var(--neo-cream) !important;
+}
+
+.fi-simple-page {
+    border: 4px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    box-shadow: var(--neo-shadow-lg) !important;
+    background-color: var(--neo-white) !important;
+}
+
+.fi-simple-header-heading {
+    font-family: var(--font-display) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: -0.02em !important;
+    color: var(--neo-black) !important;
+    font-size: 2rem !important;
+}
+
+/* ── Dropdown Menus ── */
+.fi-dropdown-list {
+    border: 3px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    background-color: var(--neo-white) !important;
+    box-shadow: var(--neo-shadow) !important;
+}
+
+.fi-dropdown-list-item-label {
+    font-family: var(--font-body) !important;
+    font-weight: 600 !important;
+    color: var(--neo-black) !important;
+}
+
+.fi-dropdown-list-item:hover {
+    background-color: var(--neo-yellow) !important;
+}
+
+/* ── Tabs ── */
+.fi-tabs-tab {
+    border: 2px solid transparent !important;
+    border-radius: var(--neo-radius) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    transition: all 0.1s ease !important;
+}
+
+.fi-tabs-tab[aria-selected="true"],
+.fi-tabs-tab.fi-active {
+    background-color: var(--neo-yellow) !important;
+    border: 2px solid var(--neo-black) !important;
+    box-shadow: 2px 2px 0 var(--neo-black) !important;
+    color: var(--neo-black) !important;
+}
+
+/* ── File Upload ── */
+.fi-fo-file-upload-dropzone {
+    border: 3px dashed var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    background-color: var(--neo-cream) !important;
+    transition: all 0.1s ease !important;
+}
+
+.fi-fo-file-upload-dropzone:hover {
+    background-color: var(--neo-yellow) !important;
+    border-style: solid !important;
+    box-shadow: var(--neo-shadow) !important;
+}
+
+/* ── Rich Text Editor ── */
+.fi-fo-rich-editor .tiptap,
+.fi-fo-rich-editor .ProseMirror {
+    border: 3px solid var(--neo-black) !important;
+    border-top: none !important;
+    border-radius: 0 !important;
+    background-color: var(--neo-white) !important;
+    font-family: var(--font-body) !important;
+    min-height: 200px !important;
+    padding: 1rem !important;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--neo-cream);
+    border-left: 2px solid var(--neo-black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neo-black);
+}
+
+/* ── Utility ── */
+.fi-avatar,
+.fi-user-avatar {
+    border: 3px solid var(--neo-black) !important;
+    border-radius: var(--neo-radius) !important;
+    box-shadow: 2px 2px 0 var(--neo-black) !important;
+}
+
